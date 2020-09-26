@@ -1,5 +1,5 @@
 body {
-  background-color: gray;
+  background: url("../img/background.jpg");
   font-family: "Golos";
 }
 
@@ -7,11 +7,17 @@ body {
   .site-main__info {
     width: 1040px;
   }
+  .info__image {
+    height:600px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   .site-main__info {
     width: 768px;
+  }
+  .info__image {
+    height:400px;
   }
 }
 
@@ -19,13 +25,32 @@ body {
   .site-main__info {
     width: 320px;
   }
+  .info__image {
+    height:300px;
+  }
+  img {
+    float: none !important;
+  }
+}
+
+.text__image {
+  max-width: 550px;
+}
+
+.text__content {
+  text-indent: 40px;
+}
+
+.text__content:not(:first-of-type) {
+  margin-top: -15px;
 }
 
 .site-main__info {
   margin: 0 auto;
   background-color: white;
   border-radius: 20px;
-  padding: 10px;
+  padding: 20px;
+  padding-left: 20px;
 }
 
 img {
@@ -52,3 +77,53 @@ img {
   margin-left: 10px;
   text-align: left;
 }
+
+.info__wrapper {
+  display: inline-block;
+  text-align: center !important;
+}
+
+.sign {
+  float: right;
+  border: 1px solid #333; 
+  padding: 7px;
+  margin: 10px 0 5px 5px;
+  background: #f0f0f0;
+ }
+ .sign figcaption {
+  margin: 0 auto 5px;
+  text-align: center;
+  font-size: 16px;
+ }
+
+ .sign__image {
+   width: 390px;
+ }
+
+ @media screen and (min-width: 320px) and (max-width: 767px) {
+   .sign {
+     width: 280px;
+   }
+   .sign__image {
+     width: 260px;
+   }
+   .text__image {
+     max-width: 300px;
+   }
+   .text__content {
+      text-indent: 15px;
+  }
+  .sign {
+    float: none;
+    margin-bottom: 20px;
+  }
+ }
+
+
+
+ .text__sign {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   margin-bottom: 25px;
+ }
